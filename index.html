@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">  
+    <head>
+    <link rel='stylesheet' href='http://timelyportfolio.github.io/rCharts_d3_sankey/libraries/widgets/d3_sankey/css/sankey.css'>
+    
+    <script src='http://timelyportfolio.github.io/rCharts_d3_sankey/libraries/widgets/d3_sankey/js/d3.v3.js' type='text/javascript'></script>
+    <script src='http://timelyportfolio.github.io/rCharts_d3_sankey/libraries/widgets/d3_sankey/js/sankey.js' type='text/javascript'></script>
+    
+    <style>
+    .rChart {
+      display: block;
+      margin-left: auto; 
+      margin-right: auto;
+      width: 100%;
+      height: 100%;
+    }  
+    </style>
+    
+  </head>
+  <body >
+    
+    <div id = 'chart2b741e5d12f5' class = 'rChart d3_sankey'></div>    
+<!--Attribution:
+Mike Bostock https://github.com/d3/d3-plugins/tree/master/sankey
+Mike Bostock http://bost.ocks.org/mike/sankey/
+-->
+
+<script>
+(function(){
+var params = {
+ "dom": "chart2b741e5d12f5",
+"width":window.screen.availWidth - (window.screen.availWidth*0.05),
+"height":window.screen.availHeight - (window.screen.availHeight*0.15),
+"data": {
+ "source": [ "Hacienda 1822", "Hacienda 1860", "Hacienda 1890", "Hacienda 1891", "Hacienda 1930", "Hacienda 1941", "Hacienda 1953", "Hacienda 1960", "Hacienda 1967", "Hacienda 1974", "Hacienda 1985", "Hacienda 1992", "Hacienda 1999", "Hacienda 2000", "Hacienda 2004", "Exteriores 1822", "Exteriores 1860", "Exteriores 1890", "Exteriores 1891", "Exteriores 1930", "Exteriores 1941", "Exteriores 1953", "Exteriores 1960", "Exteriores 1967", "Exteriores 1974", "Exteriores 1985", "Exteriores 1992", "Exteriores 1999", "Exteriores 2000", "Exteriores 2004", "Justicia 1822", "Justicia 1860", "Justicia 1890", "Justicia e Interior 1891", "Interior 1822", "Interior 1860", "Interior 1890", "Interior 1860", "Educacion 1890", "Justicia e Interior 1891", "Interior 1822", "Agricultura 1860", "Agricultura 1890", "Agricultura 1891", "Agricultura 1890", "Transporte 1891", "Agricultura 1891", "Marina 1822", "Marina 1860", "Marina 1890", "Marina 1891", "Ejercito 1822", "Ejercito 1860", "Ejercito 1890", "Ejercito 1891", "Ejercito 1930", "Ejercito 1941", "Ejercito 1953", "Ejercito 1960", "Ejercito 1967", "Ejercito 1974", "Ejercito 1985", "Ejercito 1992", "Ejercito 1999", "Defensa 2000", "Defensa 2004", "Marina 1930", "Marina 1941", "Marina 1953", "Marina 1960", "Marina 1967", "Marina 1974", "Marina 1985", "Marina 1992", "Marina 1999", "Transporte 1930", "Transporte 1941", "Transporte 1953", "Transporte 1960", "Transporte 1967", "Transporte 1974", "Transporte 1985", "Transporte 1992", "Transporte 1999", "Transporte 2000", "Transporte 2004", "Justicia e Interior 1930", "Justicia e Interior 1941", "Justicia e Interior 1953", "Justicia e Interior 1960", "Justicia e Interior 1960", "Interior 1967", "Interior 1974", "Interior 1985", "Justicia 1967", "Justicia 1974", "Justicia 1985", "Justicia 1992", "Justicia 1999", "Justicia 2000", "Justicia 2004", "Agricultura 1930", "Agricultura 1941", "Agricultura 1953", "Agricultura 1960", "Agricultura 1967", "Agricultura 1974", "Agricultura 1985", "Agricultura 1992", "Agricultura 1999", "Agricultura 2000", "Agricultura 2004", "Trabajo e Industria 1930", "Trabajo e Industria 1941", "Trabajo e Industria 1953", "Industria 1960", "Industria 1967", "Industria 1974", "Industria 1985", "Industria 1992", "Industria 1999", "Industria 2000", "Industria 2004", "Trabajo e Industria 1953", "Trab. y Seg. Social 1960", "Trab. y Seg. Social 1967", "Trabajo 1974", "Trabajo 1985", "Trabajo 1992", "Trabajo 1999", "Trabajo 2000", "Trabajo 2004", "Trab. y Seg. Social 1967", "Prev. y As. Social 1974", "Prev. y As. Social 1985", "Prev. y As. Social 1992", "Prev. y As. Social 1999", "Prev. y As. Social 2000", "Previdencia 2004", "Educacion y Sanidad 1930", "Educacion y Sanidad 1941", "Educacion y Sanidad 1941", "Sanidad 1953", "Sanidad 1960", "Sanidad 1967", "Sanidad 1974", "Sanidad 1985", "Sanidad 1992", "Sanidad 1999", "Sanidad 2000", "Sanidad 2004", "Educacion 1953", "Educacion 1961", "Educacion 1967", "Educacion 1974", "Educacion 1985", "Educacion 1992", "Educacion 1999", "Educacion 2000", "Educacion 2004", "Ejercito 1930", "Aeronautica 1941", "Aeronautica 1953", "Aeronautica 1960", "Aeronautica 1967", "Aeronautica 1974", "Aeronautica 1985", "Aeronautica 1992", "Aeronautica 1999", "Agricultura 1953", "Minas y Energia 1960", "Minas y Energia 1967", "Minas y Energia 1974", "Minas y Energia 1985", "Minas y Energia 1992", "Minas y Energia 1999", "Minas y Energia 2000", "Minas y Energia 2004", "Otros 1822", "Otros 1860", "Otros 1890", "Otros 1891", "Otros 1930", "Otros 1941", "Otros 1953", "Otros 1960", "Otros 1967", "Otros 1974", "Otros 1985", "Otros 1992", "Otros 1999", "Otros 2000", "Otros 2004" ],
+"target": [ "Hacienda 1860", "Hacienda 1890", "Hacienda 1891", "Hacienda 1930", "Hacienda 1941", "Hacienda 1953", "Hacienda 1960", "Hacienda 1967", "Hacienda 1974", "Hacienda 1985", "Hacienda 1992", "Hacienda 1999", "Hacienda 2000", "Hacienda 2004", "Hacienda 2014", "Exteriores 1860", "Exteriores 1890", "Exteriores 1891", "Exteriores 1930", "Exteriores 1941", "Exteriores 1953", "Exteriores 1960", "Exteriores 1967", "Exteriores 1974", "Exteriores 1985", "Exteriores 1992", "Exteriores 1999", "Exteriores 2000", "Exteriores 2004", "Exteriores 2014", "Justicia 1860", "Justicia 1890", "Justicia e Interior 1891", "Justicia e Interior 1930", "Interior 1860", "Interior 1890", "Justicia e Interior 1891", "Educacion 1890", "Justicia e Interior 1891", "Educacion y Sanidad 1930", "Agricultura 1860", "Agricultura 1890", "Agricultura 1891", "Agricultura 1930", "Transporte 1891", "Transporte 1930", "Trabajo e Industria 1930", "Marina 1860", "Marina 1890", "Marina 1891", "Marina 1930", "Ejercito 1860", "Ejercito 1890", "Ejercito 1891", "Ejercito 1930", "Ejercito 1941", "Ejercito 1953", "Ejercito 1960", "Ejercito 1967", "Ejercito 1974", "Ejercito 1985", "Ejercito 1992", "Ejercito 1999", "Defensa 2000", "Defensa 2004", "Defensa 2014", "Marina 1941", "Marina 1953", "Marina 1960", "Marina 1967", "Marina 1974", "Marina 1985", "Marina 1992", "Marina 1999", "Defensa 2000", "Transporte 1941", "Transporte 1953", "Transporte 1960", "Transporte 1967", "Transporte 1974", "Transporte 1985", "Transporte 1992", "Transporte 1999", "Transporte 2000", "Transporte 2004", "Transporte 2014", "Justicia e Interior 1941", "Justicia e Interior 1953", "Justicia e Interior 1960", "Justicia 1967", "Interior 1967", "Interior 1974", "Interior 1985", "Justicia 1992", "Justicia 1974", "Justicia 1985", "Justicia 1992", "Justicia 1999", "Justicia 2000", "Justicia 2004", "Justicia 2014", "Agricultura 1941", "Agricultura 1953", "Agricultura 1960", "Agricultura 1967", "Agricultura 1974", "Agricultura 1985", "Agricultura 1992", "Agricultura 1999", "Agricultura 2000", "Agricultura 2004", "Agricultura 2014", "Trabajo e Industria 1941", "Trabajo e Industria 1953", "Industria 1960", "Industria 1967", "Industria 1974", "Industria 1985", "Industria 1992", "Industria 1999", "Industria 2000", "Industria 2004", "Industria 2014", "Trab. y Seg. Social 1960", "Trab. y Seg. Social 1967", "Trabajo 1974", "Trabajo 1985", "Trabajo 1992", "Trabajo 1999", "Trabajo 2000", "Trabajo 2004", "Trabajo 2014", "Prev. y As. Social 1974", "Prev. y As. Social 1985", "Prev. y As. Social 1992", "Prev. y As. Social 1999", "Prev. y As. Social 2000", "Previdencia 2004", "Previdencia 2014", "Educacion y Sanidad 1941", "Educacion 1953", "Sanidad 1953", "Sanidad 1960", "Sanidad 1967", "Sanidad 1974", "Sanidad 1985", "Sanidad 1992", "Sanidad 1999", "Sanidad 2000", "Sanidad 2004", "Sanidad 2014", "Educacion 1961", "Educacion 1967", "Educacion 1974", "Educacion 1985", "Educacion 1992", "Educacion 1999", "Educacion 2000", "Educacion 2004", "Educacion 2014", "Aeronautica 1941", "Aeronautica 1953", "Aeronautica 1960", "Aeronautica 1967", "Aeronautica 1974", "Aeronautica 1985", "Aeronautica 1992", "Aeronautica 1999", "Defensa 2000", "Minas y Energia 1960", "Minas y Energia 1967", "Minas y Energia 1974", "Minas y Energia 1985", "Minas y Energia 1992", "Minas y Energia 1999", "Minas y Energia 2000", "Minas y Energia 2004", "Minas y Energia 2014", "Otros 1860", "Otros 1890", "Otros 1891", "Otros 1930", "Otros 1941", "Otros 1953", "Otros 1960", "Otros 1967", "Otros 1974", "Otros 1985", "Otros 1992", "Otros 1999", "Otros 2000", "Otros 2004", "Otros 2014" ],
+"value": [   30.8,     35,   34.4,   37.6,     27,   22.7,   41.3,    3.9,    4.4,    2.7,     50,     73,   71.8,   66.6,     56,    1.6,    0.6,    0.7,    1.2,    1.6,    0.9,    0.8,    1.4,    1.6,    1.7,    0.1,    0.1,    0.1,    0.2,    0.1,    7.8,      4,    5.9,    3.1,   15.3,      5,    0.1,    5.1,    0.1,    4.1,    7.4,     30,    0.1,    1.4,   29.1,   20.8,    0.5, 15.072, 6.9961, 10.214,  6.361, 21.937, 13.392, 19.447, 24.965,   23.9,     13,    9.7,   18.2,   17.7,    5.4,    1.6,    1.7,    3.3,    3.3,      4,    7.6,    8.6,      4,    9.3,   10.5,      6,      1,    0.9,    0.1,   18.4,   23.4,   22.6,   27.1,   20.4,   30.8,    0.4,      1,    0.9,    0.6,    1.2,    3.9,    4.6,    1.6,    0.9,    5.7,    4.5,    1.9,    0.1,    1.4,    0.9,    0.3,    0.4,    0.5,    0.5,    0.6,    2.9,    5.2,    2.5,    2.4,    2.8,    4.4,    1.4,    0.6,    0.6,    0.5,    0.7,    3.2,    2.7,    0.1,    0.2,    0.2,    1.6,    0.9,    0.2,    0.1,    0.2,    0.1,    2.7,    1.3,    1.2,    0.7,    8.8,    1.7,    1.6,    2.2,      4,    1.6,      5,    1.3,   12.5,   12.5,   15.6,   23.6,      6,    6.8,      5,      3,    2.2,    3.4,    5.6,   27.7,    3.6,    3.7,    3.9,    1.8,      7,    9.3,   15.3,   17.7,    2.9,    2.5,    2.6,    2.5,    4.4,    5.6,    7.3,    4.4,    8.7,   10.3,    9.5,    1.1,    0.8,    0.1,    0.3,    6.4,    1.8,      1,    0.1,    0.1,    0.5,      1,    0.8,    0.1,    0.1,    0.1,    0.1,    0.1,    0.1,    0.1,    3.1,    2.8,      5,    2.3,    0.7,    1.8,    2.9,    2.9 ] 
+},
+"nodeWidth":     15,
+"nodePadding":     10,
+"layout":      1,
+"units": "%",
+"title": "Sankey Diagram",
+"id": "chart2b741e5d12f5" 
+};
+
+params.units ? units = " " + params.units : units = "";
+
+//hard code these now but eventually make available
+var formatNumber = d3.format("0,.0f"),    // zero decimal places
+    format = function(d) { return formatNumber(d) + units; },
+    color = d3.scale.category20();
+
+if(params.labelFormat){
+  formatNumber = d3.format(".2%");
+}
+
+var svg = d3.select('#' + params.id).append("svg")
+    .attr("width", params.width)
+    .attr("height", params.height);
+    
+var sankey = d3.sankey()
+    .nodeWidth(params.nodeWidth)
+    .nodePadding(params.nodePadding)
+    .layout(params.layout)
+    .size([params.width,params.height]);
+    
+var path = sankey.link();
+    
+var data = params.data,
+    links = [],
+    nodes = [];
+    
+//get all source and target into nodes
+//will reduce to unique in the next step
+//also get links in object form
+data.source.forEach(function (d, i) {
+    nodes.push({ "name": data.source[i] });
+    nodes.push({ "name": data.target[i] });
+    links.push({ "source": data.source[i], "target": data.target[i], "value": +data.value[i] });
+}); 
+
+//now get nodes based on links data
+//thanks Mike Bostock https://groups.google.com/d/msg/d3-js/pl297cFtIQk/Eso4q_eBu1IJ
+//this handy little function returns only the distinct / unique nodes
+nodes = d3.keys(d3.nest()
+                .key(function (d) { return d.name; })
+                .map(nodes));
+
+//it appears d3 with force layout wants a numeric source and target
+//so loop through each link replacing the text with its index from node
+links.forEach(function (d, i) {
+    links[i].source = nodes.indexOf(links[i].source);
+    links[i].target = nodes.indexOf(links[i].target);
+});
+
+//now loop through each nodes to make nodes an array of objects rather than an array of strings
+nodes.forEach(function (d, i) {
+    nodes[i] = { "name": d };
+});
+
+sankey
+  .nodes(nodes)
+  .links(links)
+  .layout(params.layout);
+  
+var link = svg.append("g").selectAll(".link")
+  .data(links)
+.enter().append("path")
+  .attr("class", "link")
+  .attr("d", path)
+  .style("stroke-width", function (d) { return Math.max(1, d.dy); })
+  .sort(function (a, b) { return b.dy - a.dy; });
+
+link.append("title")
+  .text(function (d) { return d.source.name + " → " + d.target.name + "\n" + format(d.value); });
+
+var node = svg.append("g").selectAll(".node")
+  .data(nodes)
+.enter().append("g")
+  .attr("class", "node")
+  .attr("transform", function (d) { return "translate(" + d.x + "," + d.y + ")"; })
+.call(d3.behavior.drag()
+  .origin(function (d) { return d; })
+  .on("dragstart", function () { this.parentNode.appendChild(this); })
+  .on("drag", dragmove));
+
+node.append("rect")
+  .attr("height", function (d) { return d.dy; })
+  .attr("width", sankey.nodeWidth())
+  .style("fill", function (d) { return d.color = color(d.name.replace(/ .*/, "")); })
+  .style("stroke", function (d) { return d3.rgb(d.color).darker(2); })
+.append("title")
+  .text(function (d) { return d.name + "\n" + format(d.value); });
+
+node.append("text")
+  .attr("x", -6)
+  .attr("y", function (d) { return d.dy / 2; })
+  .attr("dy", ".35em")
+  .attr("text-anchor", "end")
+  .attr("transform", null)
+  .text(function (d) { return d.name; })
+.filter(function (d) { return d.x < params.width / 2; })
+  .attr("x", 6 + sankey.nodeWidth())
+  .attr("text-anchor", "start");
+
+// the function for moving the nodes
+  function dragmove(d) {
+    d3.select(this).attr("transform", 
+        "translate(" + (
+                   d.x = Math.max(0, Math.min(params.width - d.dx, d3.event.x))
+                ) + "," + (
+                   d.y = Math.max(0, Math.min(params.height - d.dy, d3.event.y))
+                ) + ")");
+        sankey.relayout();
+        link.attr("d", path);
+  }
+})();
+</script>
+    
+    <script></script>    
+  </body>
+</html>
